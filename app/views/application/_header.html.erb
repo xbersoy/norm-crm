@@ -1,33 +1,36 @@
-<div class="app-header">
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <%= link_to "Simple Form & Bootstrap", root_path, class: "navbar-brand" %>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbar-header">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbar-example" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Examples
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbar-example">
-              <li><%= link_to("Overview", examples_path, class: "dropdown-item") %></li>
-              <li><hr class="dropdown-divider"></li>
-              <% Examples::BaseController::TYPES.each do |form| %>
-                <li><%= link_to t("examples.index.#{form}.link"), [:new, :examples, form], class: "dropdown-item" %></li>
-              <% end %>
+<div class="container position-sticky z-index-sticky top-0">
+  <div class="row">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+        <div class="container-fluid px-0">
+          <%= link_to "NormCRM",
+              root_path,
+              target: "_self",
+              rel: "tooltip",
+              class:"navbar-brand font-weight-bolder ms-sm-3",
+              data: { placement: "bottom" } %>
+          <%= button_tag  type: 'button',
+                          class: "navbar-toggler shadow-none ms-2",
+                          data: { 'bs-toggle': 'collapse', 'bs-target': '#navigation' },
+                          aria: { controls: 'navigation', expanded: 'false', label: 'Toggle navigation' } do %>
+            <span class="navbar-toggler-icon mt-2">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </span>
+          <% end %>
+          <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+            <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100" style="direction: rtl;">
+              <li class="nav-item my-auto ms-3 ms-lg-0">
+                <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-sm bg-gradient-primary btn-round mb-0 me-1 mt-2 mt-md-0" %>
+              </li>
+              <li class="nav-item my-auto ms-3 ms-lg-0">
+                <%= link_to "Sign In", new_user_session_path, class: "btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0" %>
+              </li>
             </ul>
-          </li>
-          <%= content_tag(:li, link_to("Documentation", documentation_path, class: "nav-link"), class: "nav-item #{is_active?(documentation_path)}") %>
-        </ul>
-        <% if user_signed_in? %>
-          <%=button_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
-        <%else%>
-          <%=button_to 'Sign In', new_user_session_path, method: :get, class: 'btn btn-primary' %>
-        <%end%>
-      </div>
+          </div>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </div>
 </div>

@@ -20,10 +20,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "application/header";
 @import "application/jumbotron";
 
-@import "nucleo/nucleo-icons";
-@import "nucleo/nucleo-svg";
-@import "nucleo/soft-design-system";
-
 // Components
 @import "components/alert";
 @import "components/icon";
