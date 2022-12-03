@@ -1,0 +1,63 @@
+#!/bin/bash
+
+concurrency=$( nproc --all )
+echo "-----> Found ${concurrency} CPUs"
+
+spec_node_count=$(( $CI_NODE_TOTAL - 1 )) # last node is used for rubocop
+process_count=$(( $spec_node_count * $concurrency ))
+
+# Heroku buildpack creates a default database and sets $DATABASE_URL pointing to that database
+# That means tests running on Heroku CI will ignore database.yml settings
+# Also running rake parallel:setup somehow can not create the databases and causes errors
+#
+# The script below simply clones the default database provided by Heroku
+# and then splits the tests into groups so that we can have as many processes as the number of CPUs
+
+regex="^postgres:\/\/([a-zA-Z0-9]+):([a-zA-Z0-9]+)@([a-zA-Z0-9]+):([0-9]+)/([a-zA-Z0-9_]+)"
+
+if [[ $DATABASE_URL =~ $regex ]]
+then
+  export DB_USERNAME="${BASH_REMATCH[1]}" # random value created by the buildpack
+  export DB_PASSWORD="${BASH_REMATCH[2]}" # random value created by the buildpack
+  export DB_HOST="${BASH_REMATCH[3]}" # most probably localhost
+  export DB_PORT="${BASH_REMATCH[4]}" # most probably 5432
+
+  norm_db_name=norm_test
+
+  unset DATABASE_URL # we unset this, so that Rails uses database.yml settings
+
+  if [[ $CI_NODE_INDEX == $spec_node_count ]]
+  then
+    echo "-----> Running rubocop"
+    bundle exec rubocop --parallel
+  else
+    # Create new databases using the default database as the template. One database per process
+    # This is similar to rake parallel:setup
+    # It should create databases such as postgres_buildpack_db2, postgres_buildpack_db3, ...
+    echo "-----> Creating test databases for paralel testing"
+
+    for (( idx=2; idx<=$concurrency; idx++ ))
+    do
+      createdb -O $DB_USERNAME -T $norm_db_name ${norm_db_name}${idx}
+      echo "       Database ${norm_db_name}${idx} created"
+    done
+
+    # Find out which groups will be run on this machine
+    # e.g. With 2 performance-l dynos,
+    # dyno 1 should run groups 0,1,2,3,4,5,6,7
+    # dyno 2 should run groups 8,9,10,11,12,13,14,15
+    process_index_start=$(( $concurrency * $CI_NODE_INDEX ))
+    process_index_end=$(( process_index_start + concurrency ))
+
+    groups=$process_index_start
+    for (( idx=$process_index_start + 1; idx<$process_index_end; idx++ ))
+    do
+      groups+=",${idx}"
+    done
+
+    echo "-----> Running groups ${groups} from ${process_count} processes"
+    bundle exec parallel_rspec spec/ -n $process_count --only-group $groups
+  fi
+else
+    echo "-----> Unexpected DATABASE_URL format"
+fi
