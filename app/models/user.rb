@@ -1,4 +1,7 @@
+require 'devise/models/custom_validatable'
+
 class User < ApplicationRecord
+  include Devise::Models::CustomValidatable
   serialize :fruit, JSON
   serialize :music, JSON
   serialize :choises, JSON
