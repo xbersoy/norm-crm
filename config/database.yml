@@ -1,21 +1,55 @@
-# SQLite. Versions 3.8.0 and up are supported.
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem "sqlite3"
-#
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  prepared_statements: false
+
+development_default: &development_default
+  <<: *default
+  pool: 5
+  host: <%= ENV['DB_HOST'] || '127.0.0.1' %>
+  port: <%= ENV['DB_PORT'] || 5432 %>
+  template: template0
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  norm:
+    <<: *development_default
+    database: roa_dev
+    migrations_paths: db/migrate
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
+test_default: &test_default
   <<: *default
-  database: db/test.sqlite3
+  pool: 5
+  host: <%= ENV['DB_HOST'] || '127.0.0.1' %>
+  port: <%= ENV['DB_PORT'] || 5432 %>
+  template: template0
+
+test:
+  norm:
+    <<: *test_default
+    database: norm_test<%= ENV['TEST_ENV_NUMBER'] %>
+    migrations_paths: db/migrate
+
+staging_default: &staging_default
+  <<: *default
+  # pool: <%= ENV["#{(ENV['DYNO'] || '').gsub(/\.\d+/, '').upcase}_DB_POOL_SIZE"] || 5 %>
+  pool: <%= ENV['RAILS_MAX_THREADS'] %>
+  advisory_locks: false
+
+staging:
+  norm:
+    <<: *staging_default
+    url: <%= ENV['ROA_PGBOUNCER_URL'] || ENV['ROA_DB_URL'] %>
+    migrations_paths: db/migrate
+
+production_default: &production_default
+  <<: *default
+  # https://devcenter.heroku.com/articles/concurrency-and-database-connections#threaded-servers
+  #pool: <%= ENV["#{(ENV['DYNO'] || '').gsub(/\.\d+/, '').upcase}_DB_POOL_SIZE"] || 5 %> # bu sekilde yapinca dyno isminden erisilebilir WEB_DB_POOL_SIZE gibi
+  pool: <%= ENV['RAILS_MAX_THREADS'] %>
+  advisory_locks: false
+
+production:
+  norm:
+    <<: *production_default
+    url: <%= ENV['ROA_PGBOUNCER_URL'] || ENV['ROA_DB_URL'] %>
+    migrations_paths: db/migrate
