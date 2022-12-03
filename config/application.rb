@@ -2,14 +2,32 @@ require_relative "boot"
 
 require "rails/all"
 
+NORM_APP_SUBDOMAIN = "app#{SUBDOMAIN_PREFIX}"
+NORM_ADMIN_SUBDOMAIN = "admin#{SUBDOMAIN_PREFIX}"
+NORM_API_SUBDOMAIN = "api#{SUBDOMAIN_PREFIX}"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module SimpleFormBootstrap
+module NormCrm
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+
+    # Use rack sanitizer middleware
+    # config.middleware.insert 0, Rack::UTF8Sanitizer
+
+    # Rack middleware for blocking & throttling
+    # config.middleware.use Rack::Attack
+
+    # Use Cloudflare middleware to get the correct client IPs
+    # require Rails.root.join('config', 'middleware', 'rack', 'cloudflare').to_s
+    # config.middleware.insert_before 0, Rack::Cloudflare
+
+    # Using it to avoid errors because of invalid jsons
+    # require Rails.root.join('config', 'middleware', 'catch_json_parse_errors').to_s
+    # config.middleware.use CatchJsonParseErrors
 
     # Configuration for the application, engines, and railties goes here.
     #
