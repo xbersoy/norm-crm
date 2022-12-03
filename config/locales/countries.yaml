@@ -1,0 +1,696 @@
+US:
+  Code: US
+  Name: ABD
+UM:
+  Code: UM
+  Name: ABD MINOR OUTLYING ADALARI
+VI:
+  Code: VI
+  Name: ABD VİRJİN ADALARI
+AF:
+  Code: AF
+  Name: AFGANİSTAN
+DE:
+  Code: DE
+  Name: ALMANYA
+AS:
+  Code: AS
+  Name: AMERİKA SAMOASI
+AD:
+  Code: AD
+  Name: ANDORRA
+AO:
+  Code: AO
+  Name: ANGOLA
+AI:
+  Code: AI
+  Name: ANGUILLA
+AQ:
+  Code: AQ
+  Name: ANTARTİKA
+AG:
+  Code: AG
+  Name: ANTIGUA VE BERMUDA
+AR:
+  Code: AR
+  Name: ARJANTİN
+AL:
+  Code: AL
+  Name: ARNAVUTLUK
+AW:
+  Code: AW
+  Name: ARUBA
+AU:
+  Code: AU
+  Name: AVUSTRALYA
+AT:
+  Code: AT
+  Name: AVUSTURYA
+AZ:
+  Code: AZ
+  Name: AZERBAYCAN
+BS:
+  Code: BS
+  Name: BAHAMA
+BH:
+  Code: BH
+  Name: BAHREYN
+BD:
+  Code: BD
+  Name: "BANGLADE\x9EŞ"
+BB:
+  Code: BB
+  Name: BARBADOS
+WS:
+  Code: WS
+  Name: BATI SAMAO
+BE:
+  Code: BE
+  Name: BELÇİKA
+BZ:
+  Code: BZ
+  Name: BELİZE
+BJ:
+  Code: BJ
+  Name: BENİN
+BM:
+  Code: BM
+  Name: BERMUDA
+BY:
+  Code: BY
+  Name: BEYAZ RUSYA
+BT:
+  Code: BT
+  Name: BHUTAN
+AE:
+  Code: AE
+  Name: BİR.ARP.EMR.
+BO:
+  Code: BO
+  Name: BOLİVYA
+BA:
+  Code: BA
+  Name: BOSNA HERSEK
+BW:
+  Code: BW
+  Name: BOSTVANA
+BV:
+  Code: BV
+  Name: BOUVET ADASI
+BR:
+  Code: BR
+  Name: BREZİLYA
+BN:
+  Code: BN
+  Name: BRUNEİ
+BG:
+  Code: BG
+  Name: BULGARİSTAN
+BF:
+  Code: BF
+  Name: Burkina Faso
+BI:
+  Code: BI
+  Name: BURUNDİ
+CV:
+  Code: CV
+  Name: Cape Verde
+KY:
+  Code: KY
+  Name: CAYMAN ADALARI
+GI:
+  Code: GI
+  Name: "Cebeli Tarı\x8Dk"
+DZ:
+  Code: DZ
+  Name: CEZAYİR
+CX:
+  Code: CX
+  Name: CHRISTMAS ADALARI
+DJ:
+  Code: DJ
+  Name: CİBUTİ
+CK:
+  Code: CK
+  Name: "Cook Adalar\x8D"
+TD:
+  Code: TD
+  Name: Çad
+CZ:
+  Code: CZ
+  Name: ÇEK.CUM.
+CN:
+  Code: CN
+  Name: ÇİN.CUM.
+DK:
+  Code: DK
+  Name: DANİMARKA
+TL:
+  Code: TL
+  Name: DOĞU TİMOR
+DO:
+  Code: DO
+  Name: DOMİNİK
+DM:
+  Code: DM
+  Name: DOMİNİKA
+EC:
+  Code: EC
+  Name: EKVATOR
+GQ:
+  Code: GQ
+  Name: EKVATOR GİNESİ
+SV:
+  Code: SV
+  Name: EL SALVADOR
+ID:
+  Code: ID
+  Name: ENDONEZYA
+ER:
+  Code: ER
+  Name: ERİTRE
+AM:
+  Code: AM
+  Name: ERMENİSTAN
+EE:
+  Code: EE
+  Name: ESTONYA
+ET:
+  Code: ET
+  Name: ETİYOPYA
+FK:
+  Code: FK
+  Name: FALKLAND ADALARI
+FO:
+  Code: FO
+  Name: FAROE ADALARI
+MA:
+  Code: MA
+  Name: FAS
+FJ:
+  Code: FJ
+  Name: FİJİ
+CI:
+  Code: CI
+  Name: "FİLDİ\x9EŞİ SAHİLİ"
+PH:
+  Code: PH
+  Name: FİLİPİNLER
+FI:
+  Code: FI
+  Name: FİNLANDİYA
+FR:
+  Code: FR
+  Name: FRANSA
+GF:
+  Code: GF
+  Name: FRANSIZ GUYANASI
+PF:
+  Code: PF
+  Name: FRANSIZ POLİNEZYASI
+GA:
+  Code: GA
+  Name: GABON
+GM:
+  Code: GM
+  Name: GAMBİYA
+GH:
+  Code: GH
+  Name: GANA
+GN:
+  Code: GN
+  Name: GİNE
+GW:
+  Code: GW
+  Name: GİNE-BİSSAU
+GD:
+  Code: GD
+  Name: GRENADA
+GL:
+  Code: GL
+  Name: GRÖNLAND
+GP:
+  Code: GP
+  Name: GUADELUP
+GU:
+  Code: GU
+  Name: GUAM
+GT:
+  Code: GT
+  Name: GUATEMALA
+GY:
+  Code: GY
+  Name: GUYANA
+ZA:
+  Code: ZA
+  Name: GÜN.AFR.CUM.
+GS:
+  Code: GS
+  Name: GÜN.GEORGIA VE SANDWICH AD
+KR:
+  Code: KR
+  Name: GÜNEY KORE
+GE:
+  Code: GE
+  Name: GÜRCİSTAN
+HT:
+  Code: HT
+  Name: HAİTİ
+HM:
+  Code: HM
+  Name: HEARD VE MC DONALD AD
+HR:
+  Code: HR
+  Name: HIRVATİSTAN
+IN:
+  Code: IN
+  Name: HİNDİSTAN
+NL:
+  Code: NL
+  Name: HOLLANDA
+HN:
+  Code: HN
+  Name: HONDURAS
+HK:
+  Code: HK
+  Name: HONG - KONG
+IQ:
+  Code: IQ
+  Name: IRAK
+IO:
+  Code: IO
+  Name: İNGİLİZ HİNT OKY.TOP
+VG:
+  Code: VG
+  Name: İNGİLİZ VİRJİN ADALA
+GB:
+  Code: GB
+  Name: İNGİLTERE
+IR:
+  Code: IR
+  Name: İRAN
+IE:
+  Code: IE
+  Name: İRLANDA
+ES:
+  Code: ES
+  Name: İSPANYA
+IL:
+  Code: IL
+  Name: İSRAİL
+SE:
+  Code: SE
+  Name: İSVEÇ
+CH:
+  Code: CH
+  Name: İSVİÇRE
+IT:
+  Code: IT
+  Name: İTALYA
+IS:
+  Code: IS
+  Name: İZLANDA
+JM:
+  Code: JM
+  Name: JAMAİKA
+JP:
+  Code: JP
+  Name: JAPONYA
+CY:
+  Code: CY
+  Name: K.K.T.C
+KH:
+  Code: KH
+  Name: KAMBOÇYA
+CM:
+  Code: CM
+  Name: KAMERUN
+CA:
+  Code: CA
+  Name: KANADA
+ME:
+  Code: ME
+  Name: KARADAĞ
+QA:
+  Code: QA
+  Name: KATAR
+KZ:
+  Code: KZ
+  Name: KAZAKİSTAN
+KE:
+  Code: KE
+  Name: KENYA
+KG:
+  Code: KG
+  Name: KIRGIZİSTAN
+KI:
+  Code: KI
+  Name: KİRİBATİ
+CC:
+  Code: CC
+  Name: KOKOS ADALARI
+CO:
+  Code: CO
+  Name: KOLOMBİYA
+KM:
+  Code: KM
+  Name: KOMORO ADALARI
+CG:
+  Code: CG
+  Name: KONGO
+CD:
+  Code: CD
+  Name: Kongo(Eski Zaire)
+KOSOVA:
+  Code: KOSOVA
+  Name: KOSOVA
+CR:
+  Code: CR
+  Name: KOSTARİKA
+KW:
+  Code: KW
+  Name: KUVEYT
+KP:
+  Code: KP
+  Name: KUZEY KORE
+MP:
+  Code: MP
+  Name: KUZEY MARİANA ADALARI
+CU:
+  Code: CU
+  Name: KÜBA
+LS:
+  Code: LS
+  Name: LESOTHO
+LT:
+  Code: LT
+  Name: LETONYA
+LR:
+  Code: LR
+  Name: LİBERYA
+LY:
+  Code: LY
+  Name: LİBYA
+LI:
+  Code: LI
+  Name: "LİHTEN\x9ETAYN"
+LV:
+  Code: LV
+  Name: LİTVANYA
+LB:
+  Code: LB
+  Name: LÜBNAN
+LU:
+  Code: LU
+  Name: LÜKSEMBURG
+HU:
+  Code: HU
+  Name: MACARİSTAN
+MG:
+  Code: MG
+  Name: MADAGASKAR
+MO:
+  Code: MO
+  Name: MAKAO
+MK:
+  Code: MK
+  Name: MAKEDONYA
+MW:
+  Code: MW
+  Name: MALAVİ
+MV:
+  Code: MV
+  Name: MALDİV ADALARI
+MY:
+  Code: MY
+  Name: MALEZYA
+ML:
+  Code: ML
+  Name: MALİ
+MT:
+  Code: MT
+  Name: MALTA
+MH:
+  Code: MH
+  Name: MARSHALL ADALARI
+MQ:
+  Code: MQ
+  Name: MARTİNİK
+MU:
+  Code: MU
+  Name: MAURİTİUS
+YT:
+  Code: YT
+  Name: MAYOTTE
+MX:
+  Code: MX
+  Name: MEKSİKA
+EG:
+  Code: EG
+  Name: MISIR
+FM:
+  Code: FM
+  Name: MİKRONEZYA
+MN:
+  Code: MN
+  Name: MOĞOLİSTAN
+MD:
+  Code: MD
+  Name: MOLDAVYA
+MC:
+  Code: MC
+  Name: MONAKO
+MS:
+  Code: MS
+  Name: MONTSERRAT
+MR:
+  Code: MR
+  Name: MORITANYA
+MZ:
+  Code: MZ
+  Name: MOZAMBİK
+MM:
+  Code: MM
+  Name: MYANMAR
+NA:
+  Code: NA
+  Name: NAMİBYA
+NR:
+  Code: NR
+  Name: NAURU
+NP:
+  Code: NP
+  Name: NEPAL
+NE:
+  Code: NE
+  Name: Nijer
+NG:
+  Code: NG
+  Name: NİJERYA
+NI:
+  Code: NI
+  Name: NİKARAGUA
+NU:
+  Code: NU
+  Name: NİUE
+NF:
+  Code: NF
+  Name: NORFOLK ADASI
+"NO":
+  Code: "NO"
+  Name: NORVEÇ
+UZ:
+  Code: UZ
+  Name: ÖZBEKİSTAN
+PK:
+  Code: PK
+  Name: PAKİSTAN
+PW:
+  Code: PW
+  Name: PALAU
+PA:
+  Code: PA
+  Name: PANAMA
+PG:
+  Code: PG
+  Name: PAPUA Y.GİNE
+PY:
+  Code: PY
+  Name: PARAGUAY
+PE:
+  Code: PE
+  Name: PERU
+PN:
+  Code: PN
+  Name: PİTCAİRN
+PL:
+  Code: PL
+  Name: POLONYA
+PT:
+  Code: PT
+  Name: PORTEKİZ
+RE:
+  Code: RE
+  Name: REUNİON
+RO:
+  Code: RO
+  Name: ROMANYA
+RU:
+  Code: RU
+  Name: RUSYA
+RW:
+  Code: RW
+  Name: RWANDA
+SM:
+  Code: SM
+  Name: SAN MARİNO
+ST:
+  Code: ST
+  Name: SAO TOME AND PRINCIP
+SN:
+  Code: SN
+  Name: SENEGAL
+SC:
+  Code: SC
+  Name: "SEY\x9EŞEL"
+SL:
+  Code: SL
+  Name: SIERRA LEONE
+RS:
+  Code: RS
+  Name: SIRBİSTAN
+SG:
+  Code: SG
+  Name: SİNGAPUR
+SK:
+  Code: SK
+  Name: SLOVAKYA
+SI:
+  Code: SI
+  Name: SLOVENYA
+SB:
+  Code: SB
+  Name: SOLOMON ADALARI
+SO:
+  Code: SO
+  Name: SOMALİ
+LK:
+  Code: LK
+  Name: SRİLANKA
+SH:
+  Code: SH
+  Name: ST.HELENA VE BAĞLAN
+KN:
+  Code: KN
+  Name: ST.KİTTS ve NEVİS
+LC:
+  Code: LC
+  Name: ST.LUCİA
+PM:
+  Code: PM
+  Name: ST.PİERRE VE MİQUEL
+VC:
+  Code: VC
+  Name: ST.VİNCENT GRENADİNLER
+SD:
+  Code: SD
+  Name: SUDAN
+SR:
+  Code: SR
+  Name: SURİNAM
+SY:
+  Code: SY
+  Name: SURİYE
+SA:
+  Code: SA
+  Name: SUUDI ARABİSTAN
+SZ:
+  Code: SZ
+  Name: SVAZİLAND
+CL:
+  Code: CL
+  Name: ŞİLİ
+TJ:
+  Code: TJ
+  Name: TACİKİSTAN
+TZ:
+  Code: TZ
+  Name: TANZANYA
+TH:
+  Code: TH
+  Name: TAYLAND
+TW:
+  Code: TW
+  Name: TAYVAN
+TG:
+  Code: TG
+  Name: TOGO
+TK:
+  Code: TK
+  Name: TOKELAU
+TO:
+  Code: TO
+  Name: TONGA
+TT:
+  Code: TT
+  Name: TRİNİDAD VE TOBAGO
+TN:
+  Code: TN
+  Name: TUNUS
+TC:
+  Code: TC
+  Name: TURKS VE CAİCOS ADAS
+TV:
+  Code: TV
+  Name: TUVALU
+TR:
+  Code: TR
+  Name: TÜRKİYE
+TM:
+  Code: TM
+  Name: TÜRKMENİSTAN
+UG:
+  Code: UG
+  Name: UGANDA
+UA:
+  Code: UA
+  Name: UKRANYA
+OM:
+  Code: OM
+  Name: UMMAN
+UY:
+  Code: UY
+  Name: URUGUAY
+JO:
+  Code: JO
+  Name: ÜRDÜN
+VU:
+  Code: VU
+  Name: VANUATU
+VE:
+  Code: VE
+  Name: VENEZUELLA
+VN:
+  Code: VN
+  Name: VİETNAM
+WF:
+  Code: WF
+  Name: WALLİS VE FUTUNA ADA
+YE:
+  Code: YE
+  Name: YEMEN
+NC:
+  Code: NC
+  Name: YENİ KALODENYA VE BA
+NZ:
+  Code: NZ
+  Name: YENİ ZELANDA
+GR:
+  Code: GR
+  Name: YUNANİSTAN
+ZM:
+  Code: ZM
+  Name: ZAMBİA
+ZW:
+  Code: ZW
+  Name: ZİMBABVE
