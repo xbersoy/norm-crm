@@ -1,30 +1,3 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id              :integer          not null, primary key
-#  name            :string
-#  email           :string
-#  password        :string
-#  avatar          :binary
-#  bio             :text
-#  birthday        :date
-#  color           :string
-#  fruit           :string
-#  music           :string
-#  language        :string
-#  pill            :string
-#  choises         :string
-#  active          :boolean
-#  friends         :integer
-#  mood            :integer
-#  awake           :time
-#  first_kiss      :datetime
-#  terms           :boolean
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#
-
 class User < ApplicationRecord
   serialize :fruit, JSON
   serialize :music, JSON
@@ -38,22 +11,44 @@ class User < ApplicationRecord
   PILL = [:red, :blue]
   CHOISES = [:a, :b, :c, :d]
 
-  validates :name,        presence: true, length: { minimum: 3 }
-  validates :email,       presence: true, format: { with: /.+@.+\.{1}.{2,}/ }
-  validates :password,    length: { within: 8..40 }
-  validates :avatar,      presence: true
-  validates :bio,         length: { within: 100..900 }
-  validates :birthday,    presence: true, comparison: { greater_than: ->(_) { Date.today } }
-  validates :color,       presence: true
-  validates :fruit,       presence: true, exclusion_array: { in: User::FRUIT.first, presence: true, deny_blank: true }
-  validates :music,       presence: true, exclusion_array: { in: User::MUSIC.first, presence: true, deny_blank: true }
-  validates :language,    inclusion: { in: User::LANGUAGE.map(&:to_s) }
-  validates :pill,        inclusion: { in: [User::PILL.first.to_s] }
-  validates :choises,     presence: true, exclusion_array: { in: User::CHOISES.first, presence: true, deny_blank: true }
-  validates :active,      presence: true, acceptance: true
-  validates :friends,     numericality: { only_integer: true, greater_than: 1, less_than: 10_000 }
-  validates :mood,        numericality: { only_integer: true, greater_than: 50, less_than_or_equal_to: 100 }
-  validates :awake,       presence: true, comparison: { less_than: ->(_) { Date.today.beginning_of_day + 12.hours } }
-  validates :first_kiss,  presence: true, comparison: { greater_than: ->(_) { Date.today.beginning_of_day + 20.hours } }
-  validates :terms,       acceptance: true
+  devise :two_factor_authenticatable, :two_factor_backupable,
+         otp_backup_code_length: 10, otp_number_of_backup_codes: 10,
+         otp_secret_encryption_key: ENV.fetch('OTP_SECRET_KEY', nil)
+
+  devise :registerable, :recoverable, :rememberable,
+         :validatable, :trackable
+  #      :confirmable, :lockable, :timeoutable and :omniauthable
+
+  serialize :otp_backup_codes, JSON
+
+  attr_accessor :otp_plain_backup_codes
+
+  def generate_two_factor_secret_if_missing!
+    return unless otp_secret.nil?
+
+    update!(otp_secret: User.generate_otp_secret)
+  end
+
+  def enable_two_factor!
+    update!(otp_required_for_login: true)
+  end
+
+  def disable_two_factor!
+    update!(
+      otp_required_for_login: false,
+      otp_secret: nil,
+      otp_backup_codes: nil
+    )
+  end
+
+  def two_factor_qr_code_uri
+    issuer = ENV.fetch('OTP_2FA_ISSUER_NAME', nil)
+    label = [issuer, email].join(':')
+
+    otp_provisioning_uri(label, issuer: issuer)
+  end
+
+  def two_factor_backup_codes_generated?
+    otp_backup_codes.present?
+  end
 end

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resource :two_factor_settings, except: %i[index show]
+
   get 'documentation', to: 'documentation#index'
 
   resources :examples, only: :index
