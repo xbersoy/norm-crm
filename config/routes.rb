@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
   get 'documentation', to: 'documentation#index'
 
   resources :examples, only: :index
@@ -16,5 +11,5 @@ Rails.application.routes.draw do
     resource :inline,           only: [:new, :create]
   end
 
-  root to: 'examples#index'
+  root to: 'home#index'
 end
