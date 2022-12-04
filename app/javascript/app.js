@@ -4,14 +4,14 @@ import "controllers/fill_fields"
 import * as bootstrap from "bootstrap"
 
 // required opt-in - initialize tooltips
-// https://getbootstrap.com/docs/5.1/components/tooltips/#example-enable-tooltips-everywhere
+// https://getbootstrap.com/docs/5.2/components/tooltips/#example-enable-tooltips-everywhere
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 });
 
 
-// https://getbootstrap.com/docs/5.1/forms/validation/#custom-styles
+// https://getbootstrap.com/docs/5.2/forms/validation/#custom-styles
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
