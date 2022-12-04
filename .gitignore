@@ -39,3 +39,4 @@
 .sass-cache/
 vendor/bundle
 node_modules/.yarn-integrity
+yarn.lock
