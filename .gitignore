@@ -38,3 +38,4 @@
 .DS_Store
 .sass-cache/
 vendor/bundle
+node_modules/.yarn-integrity
