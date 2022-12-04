@@ -12,19 +12,6 @@
     <%= stylesheet_link_tag "application", media: "all" %>
     <%= javascript_importmap_tags "app" %>
 
-    <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-
-    <!-- Nucleo Icons -->
-    <%# <link href="../assets/stylesheets/nucleo/nucleo-icons.css" rel="stylesheet" /> %>
-    <%# <link href="../assets/stylesheets/nucleo/nucleo-svg.css" rel="stylesheet" /> %>
-
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <%# <link href="../assets/stylesheets/nucleo/nucleo-svg.css" rel="stylesheet" /> %>
-
-    <!-- CSS Files -->
-    <%# <link id="pagestyle" href="../assets/stylesheets/nucleo/soft-design-system.css?v=1.0.9" rel="stylesheet" /> %>
   </head>
   <%= content_tag :body, data: { action: action_name, controller: controller_name, path: request.path, controller: "toggle" } do %>
     <%= render "header" %>

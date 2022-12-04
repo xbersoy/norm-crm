@@ -2,12 +2,6 @@
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 
-$custom-colors: (
-  "bootstrap": #563d7c,
-  "simpleform": #00617f
-);
-$theme-colors: map-merge($theme-colors, $custom-colors);
-
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
@@ -20,16 +14,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "application/header";
 @import "application/jumbotron";
 
-@import "nucleo/nucleo-icons";
-@import "nucleo/nucleo-svg";
-@import "nucleo/soft-design-system";
-
 // Components
 @import "components/alert";
 @import "components/icon";
-
-// Syntax highlight
-@import "dracula/pygments/dracula";
-
-// simple_form helpers
-@import "simple_form-bootstrap/simple_form-bootstrap";
