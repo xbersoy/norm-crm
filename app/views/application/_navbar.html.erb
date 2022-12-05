@@ -6,17 +6,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbar-header">
       <ul class="navbar-nav mx-lg-auto">
-        <%= content_tag(:li, link_to("Home", root_path, class: "nav-link"), class:'nav-item px-3') %>
-        <%= content_tag(:li, link_to("Features", root_path, class: "nav-link"), class:'nav-item px-3') %>
+        <%= content_tag(:li, link_to("Home", "#", class: "nav-link"), class:'nav-item px-3') %>
+        <%= content_tag(:li, link_to("Features", '#features', class: "nav-link"), class:'nav-item px-3') %>
+        <%= content_tag(:li, link_to("Pricing", "#pricing", class: "nav-link"), class:'nav-item px-3') %>
         <%= content_tag(:li, link_to("Blog", root_path, class: "nav-link"), class:'nav-item px-3') %>
-        <%= content_tag(:li, link_to("Pricing", root_path, class: "nav-link"), class:'nav-item px-3') %>
       </ul>
       <div class="navbar-nav align-items-lg-center">
         <% if user_signed_in? %>
           <%= button_to("Logout", destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-light rounded-pill px-3 mx-3") %>
         <%else%>
           <%= link_to("Sign In", new_user_session_path, class: "btn btn-light rounded-pill px-3 mx-3") %>
-          <%= link_to("Sign Up", root_path, class: "btn btn-primary rounded-pill px-3 mx-3", data: { "bs-toggle": 'modal', 'bs-target':"#modal-signup"}) %>
+          <%= link_to("Sign Up", new_user_registration_path, class: "btn btn-primary rounded-pill px-3 mx-3", data: { "bs-toggle": 'modal', 'bs-target':"#modal-signup"}) %>
         <%end%>
       </div>
     </div>
