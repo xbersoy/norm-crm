@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <%= favicon_link_tag asset_path("/favicon.ico"), type: "image/x-icon" %>
         <title>NormCRM</title>
 
@@ -13,7 +13,7 @@
         <%= javascript_importmap_tags "app" %>
     </head>
 
-    <%= content_tag :body, data: { action: action_name, controller: controller_name, path: request.path, controller: "toggle" } do %>
+    <%= content_tag :body, class:'text-center', data: { action: action_name, controller: controller_name, path: request.path, controller: "toggle" } do %>
         <% yield %>
     <% end %>
 </html>
