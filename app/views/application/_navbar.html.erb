@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top py-4 blur">
+  <div class="container-xl">
+    <%= link_to "NormCRM", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false">
+      <i class="navbar-toggler-icon"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar-header">
+      <ul class="navbar-nav mx-lg-auto">
+        <%= content_tag(:li, link_to("Home", root_path, class: "nav-link"), class:'nav-item px-3') %>
+        <%= content_tag(:li, link_to("Features", root_path, class: "nav-link"), class:'nav-item px-3') %>
+        <%= content_tag(:li, link_to("Blog", root_path, class: "nav-link"), class:'nav-item px-3') %>
+        <%= content_tag(:li, link_to("Pricing", root_path, class: "nav-link"), class:'nav-item px-3') %>
+      </ul>
+      <div class="navbar-nav align-items-lg-center">
+        <%= link_to("Sign In", root_path, class: "btn btn-light rounded-pill px-3 mx-3") %>
+        <%= link_to("Sign Up", root_path, class: "btn btn-primary rounded-pill px-3 mx-3") %>
+      </div>
+    </div>
+  </div>
+</nav>
