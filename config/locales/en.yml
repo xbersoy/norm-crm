@@ -28,3 +28,49 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  errors:
+    messages:
+      invalid_date: "is not a valid date"
+      invalid_time: "is not a valid time"
+      invalid_datetime: "is not a valid datetime"
+      is_at: "must be at %{restriction}"
+      before: "must be before %{restriction}"
+      on_or_before: "must be on or before %{restriction}"
+      after: "must be after %{restriction}"
+      on_or_after: "must be on or after %{restriction}"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+  examples:
+    index:
+      floating_label:
+        link: Floating Labels Form
+        subtitle: Reference Examples
+        title: Floating Labels Form
+  helpers:
+    submit:
+      user:
+        create: "Create %{model}!"
+  simple_form:
+    labels:
+      user:
+        email: Email
+    hints:
+      user:
+        name: Text input example
+        email: We'll never share your email with anyone else.
+        password: Password input example
+    options:
+      user:
+    prompts:
+      user:
+        language: Select your Language
+    placeholders:
+      user:
+        name: Your name
+        email: Enter email
+        password: Password

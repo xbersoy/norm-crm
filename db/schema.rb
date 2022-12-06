@@ -10,9 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_29_130833) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_004326) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.bigint "owner_id"
+    t.string "name", limit: 255, default: "", null: false
+    t.string "legal_name", collation: "tr_TR"
+    t.string "tax_number"
+    t.string "tax_office"
+    t.string "occupation_field"
+    t.string "contact_person"
+    t.string "contact_phone_number"
+    t.string "logo"
+    t.string "district"
+    t.string "city"
+    t.string "owner_email"
+    t.date "trial_end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_companies_on_owner_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
