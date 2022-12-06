@@ -28,22 +28,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_29_130833) do
     t.integer "consumed_timestep"
     t.boolean "otp_required_for_login"
     t.string "otp_backup_codes", array: true
-    t.string "name"
-    t.string "avatar"
-    t.text "bio"
-    t.date "birthday"
-    t.string "color"
-    t.string "fruit"
-    t.string "music"
-    t.string "pill"
-    t.string "choises"
-    t.string "language"
-    t.integer "friends"
-    t.integer "mood"
-    t.time "awake"
-    t.datetime "first_kiss", precision: nil
-    t.boolean "active"
-    t.boolean "terms"
+    t.string "first_name"
+    t.string "last_name"
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at", precision: nil
     t.datetime "last_sign_in_at", precision: nil
