@@ -1,15 +1,6 @@
-# Simple Form and Bootstrap
-
-[![Build Status](https://github.com/heartcombo/simple_form-bootstrap/actions/workflows/test.yml/badge.svg)](https://github.com/heartcombo/simple_form-bootstrap/actions)
-
-This is a example application using [Simple Form](https://github.com/heartcombo/simple_form)
-and [Bootstrap](http://getbootstrap.com/).
+# NormCRM
 
 ## Preview
-
-An example application is running:
-
-:tv: https://simple-form-bootstrap.herokuapp.com/
 
 ## License
 

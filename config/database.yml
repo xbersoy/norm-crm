@@ -13,7 +13,7 @@ development_default: &development_default
 development:
   norm:
     <<: *development_default
-    database: roa_dev
+    database: norm_dev
     migrations_paths: db/migrate
 
 test_default: &test_default
@@ -38,7 +38,7 @@ staging_default: &staging_default
 staging:
   norm:
     <<: *staging_default
-    url: <%= ENV['ROA_PGBOUNCER_URL'] || ENV['ROA_DB_URL'] %>
+    url: <%= ENV['NORM_PGBOUNCER_URL'] || ENV['NORM_DB_URL'] %>
     migrations_paths: db/migrate
 
 production_default: &production_default
@@ -51,5 +51,5 @@ production_default: &production_default
 production:
   norm:
     <<: *production_default
-    url: <%= ENV['ROA_PGBOUNCER_URL'] || ENV['ROA_DB_URL'] %>
+    url: <%= ENV['NORM_PGBOUNCER_URL'] || ENV['NORM_DB_URL'] %>
     migrations_paths: db/migrate
