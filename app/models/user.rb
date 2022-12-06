@@ -13,7 +13,11 @@ class User < ApplicationRecord
 
   serialize :otp_backup_codes, JSON
 
-  attr_accessor :otp_plain_backup_codes, :company_name, :company_occupation_field
+  attr_accessor :otp_plain_backup_codes, :company_name, :company_occupation_field,
+                :gdpr, :terms
+
+  validates :gdpr,  acceptance: true, on: :create
+  validates :terms, acceptance: true, on: :create
 
   def generate_two_factor_secret_if_missing!
     return unless otp_secret.nil?
