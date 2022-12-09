@@ -55,3 +55,5 @@ end
 group :production do
   # gem 'pg'
 end
+
+gem "rqrcode", "~> 2.1"

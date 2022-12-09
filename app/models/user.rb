@@ -13,8 +13,10 @@ class User < ApplicationRecord
 
   serialize :otp_backup_codes, JSON
 
-  attr_accessor :otp_plain_backup_codes, :company_name, :company_occupation_field,
-                :gdpr, :terms
+  attr_accessor :otp_plain_backup_codes, :company_name, :company_occupation_field, :gdpr, :terms
+
+  has_many :user_roles
+  has_many :companies, through: :user_roles
 
   validates :gdpr,  acceptance: true, on: :create
   validates :terms, acceptance: true, on: :create

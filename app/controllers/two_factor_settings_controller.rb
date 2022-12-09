@@ -2,6 +2,7 @@
 
 class TwoFactorSettingsController < ApplicationController
   before_action :authenticate_user!
+  layout 'devise'
 
   def new
     if current_user.otp_required_for_login

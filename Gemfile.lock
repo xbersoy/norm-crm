@@ -88,6 +88,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    chunky_png (1.4.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     debug (1.7.0)
@@ -203,6 +204,10 @@ GEM
     rexml (3.2.5)
     rotp (6.2.1)
     rouge (3.30.0)
+    rqrcode (2.1.2)
+      chunky_png (~> 1.0)
+      rqrcode_core (~> 1.0)
+    rqrcode_core (1.2.0)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -274,6 +279,7 @@ DEPENDENCIES
   rails (~> 7.0.2, >= 7.0.2.3)
   rails-i18n (~> 7.0)
   rouge (~> 3.26)
+  rqrcode (~> 2.1)
   selenium-webdriver
   simple_form (~> 5.1)
   sprockets-rails

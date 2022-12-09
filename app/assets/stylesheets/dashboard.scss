@@ -1,0 +1,6 @@
+// 1. Include functions & variables first
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";

@@ -36,6 +36,8 @@ module NormCrm
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras"
+    # config.eager_load_paths << Rails.root.join("extras
+
+    config.credentials.content_path = 'config/credentials.yml.enc'
   end
 end

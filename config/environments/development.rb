@@ -69,4 +69,8 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3030 }
+  config.active_record.encryption.primary_key = 'test'
+  config.active_record.encryption.deterministic_key = 'test'
+  config.active_record.encryption.key_derivation_salt = 'test'
+  ENV['OTP_SECRET_KEY'] = 't0ps3cr3tt0ps3cr3tt0ps3cr3t' * 3
 end

@@ -158,7 +158,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.use :label, class: 'col-sm-6 col-form-label text-start'
     b.wrapper :grid_wrapper, class: 'col-sm-6' do |ba|
-      ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid', style: 'background-color: transparent;'
+      ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid', style: 'background-color: transparent; border-color: secondary'
       ba.use :full_error, wrap_with: { class: 'invalid-feedback' }
       ba.use :hint, wrap_with: { class: 'form-text' }
     end
