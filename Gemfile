@@ -21,6 +21,17 @@ gem 'devise-two-factor'
 # gem "sassc-rails"
 # gem "image_processing", "~> 1.2"
 
+# Custom
+gem 'bootstrap', '~> 5.1'
+gem 'inline_svg', '~> 1.7'
+gem 'kramdown', '~> 2.3'
+gem 'kramdown-parser-gfm', '~> 1.1'
+gem 'rails-i18n', '~> 7.0'
+gem 'rouge', '~> 3.26'
+gem 'simple_form', '~> 5.1'
+gem "rqrcode", "~> 2.1"
+gem 'view_component'
+
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
@@ -37,16 +48,6 @@ group :test do
   gem "webdrivers"
 end
 
-
-# Custom
-gem 'bootstrap', '~> 5.1'
-gem 'inline_svg', '~> 1.7'
-gem 'kramdown', '~> 2.3'
-gem 'kramdown-parser-gfm', '~> 1.1'
-gem 'rails-i18n', '~> 7.0'
-gem 'rouge', '~> 3.26'
-gem 'simple_form', '~> 5.1'
-
 group :test, :development do
   gem 'diffy'
   gem 'equivalent-xml'
@@ -55,5 +56,3 @@ end
 group :production do
   # gem 'pg'
 end
-
-gem "rqrcode", "~> 2.1"
