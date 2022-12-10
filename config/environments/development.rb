@@ -1,8 +1,16 @@
 require "active_support/core_ext/integer/time"
 
+NORM_APP_HOST = ENV['NORM_APP_HOST'] || 'uygulama.norm.localhost:3030'
+URL_PROTOCOL = ENV['URL_PROTOCOL'] || 'http'
+NORM_APP_URL = "#{URL_PROTOCOL}://#{NORM_APP_HOST}"
+
+Rails.application.routes.default_url_options[:host] = NORM_APP_HOST
+Rails.application.routes.default_url_options[:protocol] = URL_PROTOCOL
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.hosts << NORM_APP_HOST # Whitelist one hostname
+  config.hosts << /uygulama\.norm\.localhost\Z/ # Whitelist a test domain
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
