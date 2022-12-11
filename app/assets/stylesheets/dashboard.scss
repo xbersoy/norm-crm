@@ -2,6 +2,8 @@
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 
+@import "icons/bootstrap-icons.scss";
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -354,6 +356,12 @@ body.dark .home .text {
 
 #profileMenu .dropdown-toggle::after {
     content: none;
+}
+
+.dropdown-menu[data-bs-popper] {
+    max-width: fit-content;
+    left: auto !important;
+    right: 0;
 }
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
