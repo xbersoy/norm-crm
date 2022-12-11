@@ -14,4 +14,6 @@ Rails.application.config.assets.precompile += %w(
   devise.scss
   norm.scss
   norm.js
+  dashboard.scss
+  dashboard.js
   )
