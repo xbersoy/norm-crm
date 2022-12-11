@@ -1,6 +1,11 @@
 <div class="dropdown" id="profileMenu">
   <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    <span class="mr-2 d-none d-lg-inline text-gray-600 small" style="color: black;"><%= @full_name %></span>
+    <div class="row text-end">
+      <span class="mr-2 d-none d-lg-inline text-gray-600 small" style="color: black;">
+        <%= @full_name %>
+      </span>
+      <small class="mr-2 d-none d-lg-inline text-gray-600 small" style="color: black;"> PARAŞÜT DEMO </small>
+    </div>
     <img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle mx-2">
   </a>
   <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
