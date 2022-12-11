@@ -42,3 +42,4 @@ node_modules/.yarn-integrity
 yarn.lock
 
 node_modules/
+vendor/
