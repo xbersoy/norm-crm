@@ -14,11 +14,11 @@ gem "jbuilder"
 gem "pg"
 gem 'devise'
 gem 'devise-two-factor'
+gem "sassc-rails"
 # gem "turbo-rails"
 # gem "redis", "~> 4.0"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"
-# gem "sassc-rails"
 # gem "image_processing", "~> 1.2"
 
 # Custom
