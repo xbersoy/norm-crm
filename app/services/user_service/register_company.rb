@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module UserService
   class RegisterCompany < Service
     attr_reader :user

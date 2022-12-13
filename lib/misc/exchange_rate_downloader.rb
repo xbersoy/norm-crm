@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'net/http'
 require 'misc/slack_notification'
 
@@ -31,7 +33,7 @@ class ExchangeRateDownloader
 
     if response.status == 200
       parse_and_save(response.body)
-    elsif response.status == 404 && @retry_count > 0
+    elsif response.status == 404 && @retry_count.positive?
       notify "Exchange rate download from '#{path}' failed, trying again."
 
       sleep 1

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SlackNotification
   ICON      = 'norm-logo'
   URL       = 'https://norm.slack.com/services/hooks/incoming-webhook?token=XXXXX'

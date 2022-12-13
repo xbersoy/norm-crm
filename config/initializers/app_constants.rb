@@ -1,5 +1,7 @@
-AMOUNT_OR_PERCENTAGE = %w[amount percentage]
-ALLOWED_CURRENCIES = %w[TRL USD EUR GBP]
+# frozen_string_literal: true
+
+AMOUNT_OR_PERCENTAGE = %w[amount percentage].freeze
+ALLOWED_CURRENCIES = %w[TRL USD EUR GBP].freeze
 DEFAULT_CURRENCY = 'TRL'
 MIN_CURRENCY = -10**10
 MAX_CURRENCY = 10**10
@@ -9,13 +11,13 @@ FULL_ACCESS        = 'rw'
 READ_ONLY          = 'ro'
 NO_ACCESS          = 'na'
 ALLOW_ALL          = 'aa'
-ALLOWED_ACCESS_RIGHTS = [FULL_ACCESS, READ_ONLY, NO_ACCESS]
+ALLOWED_ACCESS_RIGHTS = [FULL_ACCESS, READ_ONLY, NO_ACCESS].freeze
 
-VAT_RATES = [0, 1, 8, 18]
+VAT_RATES = [0, 1, 8, 18].freeze
 
 PUSH_NOTIFICATION_TYPES = {
   stock_level_critical: 'STOCK_LEVEL_CRITICAL'
-}
+}.freeze
 
 BOOLEAN_VALUES = [true, false].freeze
 

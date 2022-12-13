@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Nifty Generators - https://github.com/ryanb/nifty-generators
 #
 # copy from Nifty Generators,

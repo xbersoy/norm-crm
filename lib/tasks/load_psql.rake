@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :db do
   namespace :psql do
     desc 'Loads Psql functions into the given database'

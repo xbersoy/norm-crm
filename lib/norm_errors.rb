@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module NormErrors
   class BadRequest < StandardError
     def initialize(message = nil)

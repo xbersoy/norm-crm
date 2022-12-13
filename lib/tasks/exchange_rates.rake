@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'misc/exchange_rate_downloader'
 
 namespace :norm do

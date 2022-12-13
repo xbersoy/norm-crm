@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './config/boot'
 require './config/environment'
 require './lib/misc/exchange_rate_downloader'

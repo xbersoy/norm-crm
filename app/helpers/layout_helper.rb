@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module LayoutHelper
   def controller?(*controller)
     controller.include?(params[:controller])

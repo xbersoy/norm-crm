@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'devise/models/custom_validatable'
 
 class User < ApplicationRecord

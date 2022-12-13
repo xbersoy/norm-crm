@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :data_migrations do
   desc 'backfill otp_required_for_login column in users table'
   task backfill_otp_required_for_login_column: :environment do

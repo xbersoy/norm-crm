@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'active_support/core_ext/integer/time'
 
 NORM_APP_HOST = ENV['NORM_APP_HOST'] || 'uygulama.norm.localhost:3030'
 URL_PROTOCOL = ENV['URL_PROTOCOL'] || 'http'
-NORM_APP_URL = "#{URL_PROTOCOL}://#{NORM_APP_HOST}"
+NORM_APP_URL = "#{URL_PROTOCOL}://#{NORM_APP_HOST}".freeze
 
 Rails.application.routes.default_url_options[:host] = NORM_APP_HOST
 Rails.application.routes.default_url_options[:protocol] = URL_PROTOCOL
