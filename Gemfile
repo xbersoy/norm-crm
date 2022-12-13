@@ -34,6 +34,13 @@ gem 'view_component'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'guard-rspec', require: false
+  gem 'rubocop-rspec'
+  gem 'rubocop-rspec-focused', '0.1.0'
+  gem 'rubocop-performance', require: false
+  gem 'guard-rubocop'
+  gem 'rspec-rails', '~> 4.0.0'
+  gem 'rubocop'
 end
 
 group :development do
