@@ -11,7 +11,7 @@
   <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
     <li>
       <%= link_to edit_user_registration_path, class: 'dropdown-item' do %>
-        <i class='bx bx-user icon' ></i>
+        <i class='bi bi-person icon' ></i>
         <span class="">Profile</span>
       <% end %>
     </li>
@@ -24,7 +24,7 @@
     <li><hr class="dropdown-divider"></li>
     <li>
       <%= button_to destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "dropdown-item" do %>
-        <i class='bx bx-log-out icon' ></i>
+        <i class='bi bi-box-arrow-left icon' ></i>
         <span class="">Sign Out</span>
       <% end %>
     </li>

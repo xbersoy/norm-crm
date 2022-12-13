@@ -9,7 +9,6 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "dashboard", media: "all" %>
     <%= javascript_importmap_tags "dashboard" %>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <%= content_tag :body, data: { action: action_name, controller: controller_name, path: request.path } do %>
     <%= render 'dashboard/shared/sidebar' %>
@@ -17,8 +16,12 @@
     <div class="home">
       <%= render 'dashboard/shared/navbar' %>
 
-      <%= render(BreadCrumbComponent.new()) %>
-
+      <%= render(BreadCrumbComponent.new(controller_name.humanize)) %>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <main class="ms-sm-auto" id="mainFrame">
         <%= yield %>
       </main>
