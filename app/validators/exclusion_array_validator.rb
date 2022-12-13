@@ -2,15 +2,13 @@ class ExclusionArrayValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
     return if value.nil?
 
-    if value.kind_of? Array
-      value.reject!(&:blank?) if options.key?(:deny_blank)
+    return unless value.is_a? Array
 
-      if options.key?(:presence)
-        record.errors.add(attribute, :empty) if value.empty?
-      end
+    value.reject!(&:blank?) if options.key?(:deny_blank)
 
-      record.errors.add(attribute, :blacklist) if value.include?(blacklist)
-    end
+    record.errors.add(attribute, :empty) if options.key?(:presence) && value.empty?
+
+    record.errors.add(attribute, :blacklist) if value.include?(blacklist)
   end
 
   private

@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class LayoutHelperTest < ActionView::TestCase
-
   test '#controller?' do
     assert_equal false, controller?('wrong-controller')
   end

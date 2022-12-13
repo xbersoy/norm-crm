@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 SUBDOMAIN_PREFIX = ENV['SUBDOMAIN_PREFIX'].present? ? ".#{ENV['SUBDOMAIN_PREFIX']}" : nil
 NORM_APP_SUBDOMAIN = "app#{SUBDOMAIN_PREFIX}"

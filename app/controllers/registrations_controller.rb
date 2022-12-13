@@ -13,7 +13,7 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     build_resource(sign_up_params)
 
-    ApplicationRecord.transaction do |tx|
+    ApplicationRecord.transaction do |_tx|
       super do
         if resource.persisted?
           service = UserService::RegisterCompany.call(resource)

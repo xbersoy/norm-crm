@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require 'test_helper'
 
 class ProfileMenuComponentTest < ViewComponent::TestCase
   def test_component_renders_something_useful
@@ -19,7 +19,7 @@ class ProfileMenuComponentTest < ViewComponent::TestCase
       </ul>
     </div>
     ),
-      render_inline(ProfileMenuComponent.new(full_name: "Burak Ersoy")).to_html
+      render_inline(ProfileMenuComponent.new(full_name: 'Burak Ersoy')).to_html
     )
   end
 end

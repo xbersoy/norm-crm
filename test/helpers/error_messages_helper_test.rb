@@ -1,13 +1,13 @@
 require 'test_helper'
 
 class ErrorMessagesHelperTest < ActionView::TestCase
-  describe "#error_messages_for" do
+  describe '#error_messages_for' do
     before do
       @model = users(:invalid)
       @model.valid?
     end
 
-    it "display error messages as html" do
+    it 'display error messages as html' do
       _(error_messages_for(@model)).must_match '<div class="alert alert-danger alert-form alert-dismissible">'
       _(error_messages_for(@model)).must_match '<a href="#" class="close" data-bs-dismiss="alert">×</a>'
       _(error_messages_for(@model)).must_match '<h6 class="text-uppercase text-reset my-1">'

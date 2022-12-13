@@ -2,11 +2,6 @@
 
 class BreadCrumbComponent < ViewComponent::Base
   def initialize(path)
-    if path.present?
-      @path = path
-    else
-      @path = nil
-    end
+    @path = (path if path.present?)
   end
-
 end

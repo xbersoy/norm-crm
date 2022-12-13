@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'registrations',
-    sessions: 'sessions'
+    sessions:      'sessions'
   }
   resource :two_factor_settings, except: %i[index show]
 

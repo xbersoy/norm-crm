@@ -10,27 +10,27 @@ class IconHelperTest < ActionView::TestCase
     @svg = StringIO.new(raw_xml)
   end
 
-  test "#icon_svg class" do
-    assert_match /i class="icon icon-lg d-inline-block"/, icon_svg(@svg, class: "icon icon-lg")
+  test '#icon_svg class' do
+    assert_match(/i class="icon icon-lg d-inline-block"/, icon_svg(@svg, class: 'icon icon-lg'))
   end
 
-  test "#icon_svg svg" do
-    assert_match /path d="M16 4C9.384 4 4 9.384 4 16s5.384 12 12 12 12-5.384 12-12S22.616/, icon_svg(@svg, class: "icon icon-lg")
+  test '#icon_svg svg' do
+    assert_match(/path d="M16 4C9.384 4 4 9.384 4 16s5.384 12 12 12 12-5.384 12-12S22.616/, icon_svg(@svg, class: 'icon icon-lg'))
   end
 
-  test "#icon_svg title" do
-    assert_match /title="Icons are awesome"/, icon_svg(@svg, class: "icon", title: "Icons are awesome")
+  test '#icon_svg title' do
+    assert_match(/title="Icons are awesome"/, icon_svg(@svg, class: 'icon', title: 'Icons are awesome'))
   end
 
-  test "#icon_svg width" do
-    assert_match /width="100%"/, icon_svg(@svg)
+  test '#icon_svg width' do
+    assert_match(/width="100%"/, icon_svg(@svg))
   end
 
-  test "#icon_svg height" do
-    assert_match /height="100%"/, icon_svg(@svg)
+  test '#icon_svg height' do
+    assert_match(/height="100%"/, icon_svg(@svg))
   end
 
-  test "#icon_svg preserveAspectRatio" do
-    assert_match /preserveAspectRatio="xMaxYMax meet"/, icon_svg(@svg)
+  test '#icon_svg preserveAspectRatio' do
+    assert_match(/preserveAspectRatio="xMaxYMax meet"/, icon_svg(@svg))
   end
 end

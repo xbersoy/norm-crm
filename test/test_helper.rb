@@ -1,6 +1,6 @@
-ENV["RAILS_ENV"] ||= "test"
-require_relative "../config/environment"
-require "rails/test_help"
+ENV['RAILS_ENV'] ||= 'test'
+require_relative '../config/environment'
+require 'rails/test_help'
 
 require 'minitest/autorun'
 
@@ -26,7 +26,7 @@ class ActionView::TestCase
     actual_xml   = Nokogiri::XML("<test-xml>\n#{actual}\n</test-xml>", &:noblanks)
 
     equivalent = EquivalentXml.equivalent?(expected_xml, actual_xml)
-    assert equivalent, -> {
+    assert equivalent, lambda {
       # using a lambda because diffing is expensive
       Diffy::Diff.new(
         sort_attributes(expected_xml.root).to_xml(indent: 2),
@@ -37,17 +37,18 @@ class ActionView::TestCase
 
   private
 
-    def sort_attributes(doc)
-      return if doc.blank?
-      doc.dup.traverse do |node|
-        if node.is_a?(Nokogiri::XML::Element)
-          attributes = node.attribute_nodes.sort_by(&:name)
-          attributes.each do |attribute|
-            node.delete(attribute.name)
-            node[attribute.name] = attribute.value
-          end
+  def sort_attributes(doc)
+    return if doc.blank?
+
+    doc.dup.traverse do |node|
+      if node.is_a?(Nokogiri::XML::Element)
+        attributes = node.attribute_nodes.sort_by(&:name)
+        attributes.each do |attribute|
+          node.delete(attribute.name)
+          node[attribute.name] = attribute.value
         end
-        node
       end
+      node
     end
+  end
 end

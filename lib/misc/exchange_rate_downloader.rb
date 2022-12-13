@@ -69,7 +69,7 @@ class ExchangeRateDownloader
   end
 
   def parse_big_decimal(value)
-    return BigDecimal(0) if value.blank?
+    return BigDecimal('0') if value.blank?
 
     BigDecimal(value)
   end

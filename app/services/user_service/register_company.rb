@@ -11,7 +11,7 @@ module UserService
     def call
       fail_with_error(:create_company_failed) unless create_company
 
-      return if self.status == :failed
+      return if status == :failed
 
       @company
     end

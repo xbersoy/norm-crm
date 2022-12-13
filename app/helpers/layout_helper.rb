@@ -3,14 +3,14 @@ module LayoutHelper
     controller.include?(params[:controller])
   end
 
-  def is_active?(link_path, return_class = "active")
+  def is_active?(link_path, return_class = 'active')
     current_page?(link_path) ? return_class : nil
   end
 
   def markdown(source)
     options = {
-      input: 'GFM',
-      syntax_highlighter: :rouge,
+      input:                   'GFM',
+      syntax_highlighter:      :rouge,
       syntax_highlighter_opts: {
         css_class: 'highlight p-4 mb-0'
       }
@@ -20,8 +20,8 @@ module LayoutHelper
 
   def render_source(input, language = :erb, filename = nil)
     capture do
-      concat content_tag(:p, "📂 #{filename}", class: "bg-light border small font-weight-bold px-4 py-2 mb-0 mt-4") if filename
-      concat markdown("```#{language.to_s}\n#{input}```")
+      concat content_tag(:p, "📂 #{filename}", class: 'bg-light border small font-weight-bold px-4 py-2 mb-0 mt-4') if filename
+      concat markdown("```#{language}\n#{input}```")
     end
   end
 end
