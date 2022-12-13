@@ -1,0 +1,17 @@
+en:
+  navbar:
+    brand: 'NormCRM'
+    home: 'Home'
+    features: 'Features'
+    pricing: 'Pricing'
+    blog: 'Blog'
+    sign_in: 'Sign In'
+    sign_up: 'Sign Up'
+    sign_out: 'Sign Out'
+  footer:
+    product:
+      title: 'Product'
+      home: 'Home'
+      features: 'Features'
+      pricing: 'Pricing'
+      try: 'Try it for free'

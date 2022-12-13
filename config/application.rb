@@ -41,5 +41,7 @@ module NormCrm
     # config.eager_load_paths << Rails.root.join("extras
 
     config.credentials.content_path = 'config/credentials.yml.enc'
+
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
   end
 end

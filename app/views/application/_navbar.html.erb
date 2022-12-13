@@ -1,24 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top py-4 blur">
-  <div class="container-xl">
-    <%= link_to "NormCRM", root_path, class: "navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false">
-      <i class="navbar-toggler-icon"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbar-header">
-      <ul class="navbar-nav mx-lg-auto">
-        <%= content_tag(:li, link_to("Home", "#", class: "nav-link"), class:'nav-item px-3') %>
-        <%= content_tag(:li, link_to("Features", '#features', class: "nav-link"), class:'nav-item px-3') %>
-        <%= content_tag(:li, link_to("Pricing", "#pricing", class: "nav-link"), class:'nav-item px-3') %>
-        <%= content_tag(:li, link_to("Blog", root_path, class: "nav-link"), class:'nav-item px-3') %>
-      </ul>
-      <div class="navbar-nav align-items-lg-center">
+<%= content_tag(:nav, class:'navbar navbar-expand-lg navbar-dark bg-primary fixed-top py-4 blur', id:'mainNav') do %>
+  <%= content_tag(:div, class:'container-xl') do %>
+    <%= link_to(t('navbar.brand'), root_path, class: "navbar-brand") %>
+    <%= content_tag(:button, class:'navbar-toggler', type:'button',
+                    data: { 'bs-target': '#navbar-header', 'bs-toggle': 'collapse' },
+                    aria: { controls: 'navbar-header', expanded: 'false' }) do %>
+      <%= content_tag(:i, '', class:'navbar-toggler-icon') %>
+    <% end %>
+    <%= content_tag(:div, class:'collapse navbar-collapse', id:"navbar-header") do %>
+      <%= content_tag(:ul, class:'navbar-nav mx-lg-auto') do %>
+        <%= content_tag(:li, link_to(t('navbar.home'), "#", class: "nav-link"), class:'nav-item px-3') %>
+        <%= content_tag(:li, link_to(t('navbar.features'), '#features', class: "nav-link"), class:'nav-item px-3') %>
+        <%= content_tag(:li, link_to(t('navbar.pricing'), "#pricing", class: "nav-link"), class:'nav-item px-3') %>
+        <%= content_tag(:li, link_to(t('navbar.blog'), root_path, class: "nav-link"), class:'nav-item px-3') %>
+      <%end%>
+      <%= content_tag(:div, class:'navbar-nav align-items-lg-center') do %>
         <% if user_signed_in? %>
-          <%= button_to("Logout", destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-light rounded-pill px-3 mx-3") %>
+          <%= button_to(t('navbar.sign_out'), destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-light rounded-pill px-3 mx-3") %>
         <%else%>
-          <%= link_to("Sign In", new_user_session_path, class: "btn btn-light rounded-pill px-3 mx-3") %>
-          <%= link_to("Sign Up", new_user_registration_path, class: "btn btn-primary rounded-pill px-3 mx-3 border-white") %>
+          <%= link_to(t('navbar.sign_in'), new_user_session_path, class: "btn btn-light rounded-pill px-3 mx-3") %>
+          <%= link_to(t('navbar.sign_up'), new_user_registration_path, class: "btn btn-primary rounded-pill px-3 mx-3 border-white") %>
         <%end%>
-      </div>
-    </div>
-  </div>
-</nav>
+      <%end%>
+    <%end%>
+  <%end%>
+<%end%>

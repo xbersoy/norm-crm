@@ -2,35 +2,31 @@
   <footer class="py-5">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
+        <h5><%= t('footer.product.title')%></h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><%= t('footer.product.home')%></a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><%= t('footer.product.features')%></a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><%= t('footer.product.pricing')%></a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><%= t('footer.product.try')%></a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
+        <h5>Resources</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
+        <h5>Norm</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Careers</a></li>
         </ul>
       </div>
 
@@ -48,7 +44,6 @@
     </div>
 
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>© 2022 Company, Inc. All rights reserved.</p>
       <ul class="list-unstyled d-flex">
         <li class="ms-3"><i class="bi bi-github"></i></li>
         <li class="ms-3"><i class="bi bi-youtube"></i></li>
@@ -57,6 +52,8 @@
         <li class="ms-3"><i class="bi bi-facebook"></i></li>
         <li class="ms-3"><i class="bi bi-linkedin"></i></li>
       </ul>
+      <p>© 2022 Norm - All rights reserved.</p>
+      <%= image_tag 'madeInTurkey.jpeg', size: "48x19" %>
     </div>
   </footer>
 </div>
