@@ -6,7 +6,7 @@
                     aria: { controls: 'navbar-header', expanded: 'false' }) do %>
       <%= content_tag(:i, '', class:'navbar-toggler-icon') %>
     <% end %>
-    <%= content_tag(:div, class:'collapse navbar-collapse', id:"navbar-header") do %>
+    <%= content_tag(:div, class:'collapse navbar-collapse', style:'text-align: center;', id:"navbar-header") do %>
       <%= content_tag(:ul, class:'navbar-nav mx-lg-auto') do %>
         <%= content_tag(:li, link_to(t('navbar.home'), "#", class: "nav-link"), class:'nav-item px-3') %>
         <%= content_tag(:li, link_to(t('navbar.features'), '#features', class: "nav-link"), class:'nav-item px-3') %>
