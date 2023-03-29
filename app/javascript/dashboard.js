@@ -13,7 +13,7 @@ toggle.addEventListener("click", () => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 800) {
+  if (window.innerWidth > 824) {
     sidebar.classList.remove('close')
   } else {
     sidebar.classList.add('close')
