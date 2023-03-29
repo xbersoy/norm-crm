@@ -244,6 +244,11 @@ header .image-text .profession {
     width: calc(100% - 78px);
 }
 
+#profileMenu{
+    margin-left: auto;
+    margin-right: 0;
+}
+
 #profileMenu .dropdown-toggle::after {
     content: none;
 }
