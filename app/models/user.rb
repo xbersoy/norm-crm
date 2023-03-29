@@ -51,4 +51,8 @@ class User < ApplicationRecord
   def two_factor_backup_codes_generated?
     otp_backup_codes.present?
   end
+
+  def display_name
+    first_name.present? && last_name.present? ? first_name + ' ' + last_name : email
+  end
 end
