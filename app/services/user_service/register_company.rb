@@ -2,12 +2,13 @@
 
 module UserService
   class RegisterCompany < Service
-    attr_reader :user
+    attr_reader :resource, :persisted_user
 
-    def initialize(user)
+    def initialize(resource)
       super()
 
-      @user = User.find(user.id)
+      @resource = resource
+      @persisted_user = User.find(resource.id)
     end
 
     def call
@@ -21,12 +22,12 @@ module UserService
     private
 
     def create_company
-      @company = user.companies.create(
-        name:             user.company_name,
-        occupation_field: user.company_occupation_field
+      @company = persisted_user.companies.create(
+        name:             resource.company_name,
+        occupation_field: resource.company_occupation_field
       )
 
-      @company.owner = user
+      @company.owner = persisted_user
       @company.save
     end
   end
