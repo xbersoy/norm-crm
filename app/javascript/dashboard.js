@@ -11,3 +11,11 @@ const body = document.querySelector("body"),
 toggle.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 800) {
+    sidebar.classList.remove('close')
+  } else {
+    sidebar.classList.add('close')
+  }
+});
