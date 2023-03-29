@@ -26,7 +26,6 @@ Rails.logger.info 'Creating Company....'
 
 # id is required for connecting records across different apps
 company = Company.new(
-  id:               1,
   name:             user.company_name,
   occupation_field: user.company_occupation_field
 )
