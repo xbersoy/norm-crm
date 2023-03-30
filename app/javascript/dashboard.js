@@ -6,8 +6,10 @@ eagerLoadControllersFrom("dashboard", dashboard)
 
 const body = document.querySelector("body"),
   sidebar = body.querySelector("nav"),
-  toggle = body.querySelector(".toggle");
+  toggle = body.querySelector(".toggle"),
+  navLinkItems = sidebar.querySelectorAll('.nav-link');
 
+console.log(navLinkItems);
 toggle.addEventListener("click", () => {
   sidebar.classList.toggle("close");
 });

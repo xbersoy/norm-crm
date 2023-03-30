@@ -13,7 +13,7 @@
         <%= javascript_importmap_tags "devise" %>
     </head>
 
-    <%= content_tag :body, class:'text-center', data: { action: action_name, controller: controller_name, path: request.path, controller: "toggle" } do %>
+    <%= content_tag :body, class:'text-center', data: { action: action_name, controller: controller_name, path: request.path, controller: "toggle" } do %> <!-- TODO: fix -->
         <% yield %>
     <% end %>
 </html>

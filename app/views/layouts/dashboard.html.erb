@@ -17,7 +17,6 @@
       <%= render 'dashboard/shared/navbar' %>
 
       <%= render(BreadCrumbComponent.new(controller_name.humanize)) %>
-      <br>
       <main class="ms-sm-auto" id="mainFrame">
         <%= yield %>
       </main>

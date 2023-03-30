@@ -196,6 +196,10 @@ header .image-text .profession {
     transition: var(--tran-03);
 }
 
+.sidebar a .isActive {
+    --text-color: var(--primary-color);
+}
+
 .sidebar li a:hover {
     background-color: var(--primary-color);
 }
