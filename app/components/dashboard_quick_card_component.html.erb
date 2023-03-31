@@ -1,0 +1,13 @@
+<div class="icon-card mb-30">
+  <div class="icon <%= @icon_color %>">
+    <i class="bi <%= @icon_type %>"></i>
+  </div>
+  <div class="content">
+    <h6 class="mb-10"><%= @title %></h6>
+    <h3 class="text-bold mb-10"><%= @value %></h3>
+    <p class="text-sm <%= @text_state %>">
+      <i class="bi bi-arrow-<%= @direction %>"></i> <%= @footer_value %>
+      <span class="text-gray"><%= @footer_text %></span>
+    </p>
+  </div>
+</div>
