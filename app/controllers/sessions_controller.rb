@@ -2,7 +2,6 @@
 
 class SessionsController < Devise::SessionsController
   include AuthenticateWithOtpTwoFactor
-
   layout 'devise'
 
   prepend_before_action :authenticate_with_otp_two_factor,
