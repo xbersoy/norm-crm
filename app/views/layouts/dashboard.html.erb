@@ -16,7 +16,13 @@
     <main class="main-wrapper">
       <%= render 'dashboard/shared/header' %>
 
-      <%= yield %>
+      <section class="section">
+        <div class="container-fluid">
+          <%= render(DashboardTitleSectionComponent.new('eCommerce Dashboard', nil)) %>
+
+          <%= yield %>
+        </div>
+      </section>
 
       <%= render 'dashboard/shared/footer' %>
     </main>

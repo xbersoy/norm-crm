@@ -1,32 +1,14 @@
-<section class="section">
-  <div class="container-fluid">
-    <div class="title-wrapper pt-20">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <div class="title mb-30">
-            <h2>eCommerce Dashboard</h2>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="breadcrumb-wrapper mb-30">
-            <%= render(BreadCrumbComponent.new) %>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xl-3 col-lg-4 col-sm-6">
-        <%= render(DashboardQuickCardComponent.new('purple', 'bi-basket', 'New Orders', '34567', 'up', '+2.00%', '(30 days)')) %>
-      </div>
-      <div class="col-xl-3 col-lg-4 col-sm-6">
-        <%= render(DashboardQuickCardComponent.new('success', 'bi-currency-dollar', 'Total Income', '$74,567', 'up', '+5.45%', 'Increased')) %>
-      </div>
-      <div class="col-xl-3 col-lg-4 col-sm-6">
-        <%= render(DashboardQuickCardComponent.new('primary', 'bi-wallet2', 'Total Expense', '$24,567', 'down', '-2.00%', 'Expense')) %>
-      </div>
-      <div class="col-xl-3 col-lg-4 col-sm-6">
-        <%= render(DashboardQuickCardComponent.new('orange', 'bi-person', 'New User', '34567', 'down', '-25.00%', 'Earning')) %>
-      </div>
-    </div>
+<div class="row">
+  <div class="col-xl-3 col-lg-4 col-sm-6">
+    <%= render(DashboardQuickCardComponent.new('purple', 'bi-basket', 'New Orders', '34567', 'up', '+2.00%', '(30 days)')) %>
   </div>
-</section>
+  <div class="col-xl-3 col-lg-4 col-sm-6">
+    <%= render(DashboardQuickCardComponent.new('success', 'bi-currency-dollar', 'Total Income', '$74,567', 'up', '+5.45%', 'Increased')) %>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-sm-6">
+    <%= render(DashboardQuickCardComponent.new('primary', 'bi-wallet2', 'Total Expense', '$24,567', 'down', '-2.00%', 'Expense')) %>
+  </div>
+  <div class="col-xl-3 col-lg-4 col-sm-6">
+    <%= render(DashboardQuickCardComponent.new('orange', 'bi-person', 'New User', '34567', 'down', '-25.00%', 'Earning')) %>
+  </div>
+</div>
