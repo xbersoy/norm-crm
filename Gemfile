@@ -15,8 +15,8 @@ gem 'pg'
 gem 'devise'
 gem 'devise-two-factor'
 gem 'sassc-rails'
-# gem "turbo-rails"
-# gem "redis", "~> 4.0"
+gem "turbo-rails"
+gem "redis", "~> 4.0"
 # gem "kredis"
 # gem "bcrypt", "~> 3.1.7"
 # gem "image_processing", "~> 1.2"
