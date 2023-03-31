@@ -46,7 +46,7 @@ import * as bootstrap from "bootstrap"
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
-            offset: 72,
+            offset: 128,
         });
     };
 
