@@ -16,3 +16,4 @@ pin 'bootstrap/icons', to: 'https://ga.jspm.io/npm:bootstrap-icons@1.9.1/font/bo
 pin '@popperjs/core', to: 'https://ga.jspm.io/npm:@popperjs/core@2.11.6/dist/esm/index.js'
 pin 'stimulus', to: 'stimulus.js', preload: false # proxy for @hotwired/stimulus
 pin 'stimulus-password-visibility', to: 'https://ga.jspm.io/npm:stimulus-password-visibility@1.1.1/dist/stimulus-password-visibility.es.js'
+pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
