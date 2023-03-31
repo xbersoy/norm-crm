@@ -1,11 +1,10 @@
-<div class="ms-5 mt-2">
-  <div class="row">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <% unless @path.nil? %>
-          <li class="breadcrumb-item active" aria-current="page"><%= @path %></li>
-        <% end %>
-      </ol>
-    </nav>
-  </div>
-</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <%= link_to('Dashboard', dashboard_path) %>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">
+      eCommerce
+    </li>
+  </ol>
+</nav>
