@@ -1,38 +1,33 @@
-<nav class="sidebar">
-  <header class="mt-2">
-    <div class="image-text">
-      <span class="image">
-        <%= image_tag 'sample-logo.png' %>
-      </span>
-      <div class="text logo-text">
-        <span class="name">NormCRM</span>
-      </div>
-    </div>
-    <i class='bi bi-caret-right toggle'></i>
-  </header>
-  <div class="menu-bar">
-    <div class="menu">
-      <ul class="menu-links">
-        <li class="nav-link">
-          <%= link_to(dashboard_path) do %>
-            <i class='bi bi-house icon isActive' ></i>
-            <span class="text nav-text isActive">Dashboard</span>
-          <% end %>
-        </li>
-        <li class="nav-link">
-          <a href="#">
-            <i class='bi bi-bar-chart icon' ></i>
-            <span class="text nav-text">Revenue</span>
-          </a>
-        </li>
-        <li class="nav-link">
-          <%= link_to(products_path) do %>
-            <i class='bi bi-bucket icon' ></i>
-            <span class="text nav-text">Products</span>
-          <% end %>
-        </li>
-      </ul>
-    </div>
+<aside class="sidebar-nav-wrapper">
+  <div class="navbar-logo">
+    <%= link_to(dashboard_path) do %>
+      <%= image_tag 'sample-logo.png', alt: 'logo', size: '30x30' %>
+    <% end %>
   </div>
-</nav>
-
+  <nav class="sidebar-nav">
+    <ul>
+      <li class="nav-item nav-item-has-children">
+        <%= link_to(dashboard_path, data: { 'bs-target': '#ddmenu_1', 'bs-toggle': 'collapse' },
+                    aria: { controls: 'ddmenu_1', expanded: 'false', label: 'Toggle navigation' }) do %>
+          <i class='bi bi-house icon'></i>
+          <span class="text">Dashboard</span>
+        <% end %>
+        <ul id="ddmenu_1" class="collapse show dropdown-nav">
+          <li>
+            <%= link_to(dashboard_path, class: 'active') do %>
+              <span class="text">eCommerce</span>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+      <span class="divider"><hr/></span>
+      <li class="nav-item">
+        <%= link_to(products_path) do %>
+          <i class='bi bi-bucket icon'></i>
+          <span class="text">Products</span>
+        <% end %>
+      </li>
+    </ul>
+  </nav>
+</aside>
+<div class="overlay"></div>
