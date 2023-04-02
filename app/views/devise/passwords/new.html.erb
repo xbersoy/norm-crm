@@ -1,18 +1,24 @@
-<h2>Forgot your password?</h2>
+<main class="form-reset m-auto">
+  <div class="reset-wrapper my-3">
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), wrapper: :floating_labels_form, html: { method: :post, class: "reset-form" }) do |f| %>
+      <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+      <%= image_tag("sample-logo.png", class: "my-4", :alt => "", size: '65') %>
+      <%= content_tag(:h1, "Reset your password", class: 'h3 mb-3 fw-normal') %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+      <div class="form-inputs my-4">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                    html: { class: "form-control" }%>
+      </div>
+
+      <div class="form-actions mb-5">
+        <%= f.button :submit, "Reset Password", class: "w-100 btn btn-primary rounded-pill mb-3" %>
+        <%= link_to "Cancel", new_user_session_path, class: "w-100 btn btn-outline-secondary rounded-pill" %>
+      </div>
+      <%= content_tag(:p, "© 2017–2022", class: 'my-4 text-muted') %>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</main>

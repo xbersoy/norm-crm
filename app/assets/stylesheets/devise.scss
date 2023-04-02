@@ -7,11 +7,12 @@
 
 // Components
 @import "devise/login";
+@import "devise/reset";
 
 html,
 body {
   height: 100%;
-  background-image: url("devise_background.jpg");
+  //background-image: url("devise_background.jpg");
 }
 
 body {

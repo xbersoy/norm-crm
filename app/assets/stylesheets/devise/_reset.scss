@@ -1,0 +1,27 @@
+.form-reset {
+  width: 400px;
+  padding: 15px;
+}
+
+.form-reset .form-floating:focus-within {
+  z-index: 1;
+}
+
+.form-reset input[type="email"] {
+  border-radius: 6px 6px 6px 6px;
+}
+
+.reset-wrapper {
+  background: $white;
+  padding: 10px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+
+  .reset-form {
+    width: 75%;
+  }
+}
