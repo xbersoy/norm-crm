@@ -70,7 +70,14 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # FIX: not sure with this line
   config.assets.debug = false
+
+  # added this line for reloading assets on navigation
+  # before adding the line below when you press back button from signin page app doesnt navigate back
+  # or when you navigate to sign in page from sign in page css's not loading (only common css classes like .home, .root)
+  # ie: login screen background color is different but it wasn't changing
+  config.assets.digest = false
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
