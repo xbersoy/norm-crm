@@ -1,35 +1,33 @@
-<div class="container-fluid col-xl-10 col-10 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
-      <div class="col-lg-4 text-center text-lg-start mt-0">
-        <h1 class="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
-        <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-      </div>
-    <div class="col-md-10 mx-auto col-lg-6">
-      <div class="card-transparent">
-        <div class="card-body">
-          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
-              wrapper: :horizontal_form,
-              wrapper_mappings: {
-                boolean:       :horizontal_boolean,
-                check_boxes:   :horizontal_collection
-              }) do |f| %>
-            <%= f.input :email, autofocus: true, hint: false, placeholder: false %>
-            <%= f.input :first_name, hint: false %>
-            <%= f.input :last_name, hint: false %>
-            <%= f.input :company_name, hint: false %>
-            <%= f.input :company_occupation_field, hint: false %>
-            <%= f.input :password, hint: false, placeholder: false %>
-            <%= f.input :password_confirmation, hint: false %>
-            <br>
-            <div class="actions">
-              <%= f.submit 'Signup', class: 'w-75 btn btn-lg btn-primary rounded-pill mb-3' %>
-              <%= link_to "Cancel", root_path, class: "w-75 btn btn-lg btn-outline-secondary rounded-pill" %>
-            </div>
-          <% end %>
-          <br>
-          <%= render "devise/shared/links" %>
-        </div>
-      </div>
+<div class="row align-items-center py-5 devise-card register-wrapper py-5 mx-auto">
+  <div class="col-lg-5 text-md-start mx-auto mt-0 left-col">
+    <div class="text-center">
+      <%= image_tag("logo.png", class: "", :alt => "", size: '75') %>
     </div>
+    <br>
+    <br>
+    <h2 class="display-6 col-lg-11 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h2>
+    <br>
+    <p class="col-lg-12 fs-5">Below is an example form built entirely with Bootstrap’s form controls. Each required
+      form group has a validation state that can.</p>
+  </div>
+  <div class="col-md-10 mx-auto col-lg-6">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
+                        wrapper: :horizontal_form,
+                        wrapper_mappings: {
+                          boolean: :horizontal_boolean,
+                          check_boxes: :horizontal_collection
+                        }) do |f| %>
+      <%= f.input :email, autofocus: true, hint: false, placeholder: false %>
+      <%= f.input :first_name, hint: false %>
+      <%= f.input :last_name, hint: false %>
+      <%= f.input :company_name, hint: false %>
+      <%= f.input :company_occupation_field, hint: false %>
+      <%= f.input :password, hint: false, placeholder: false %>
+      <%= f.input :password_confirmation, hint: false %>
+      <%= content_tag(:div, class: 'my-4 register-action-box') do %>
+        <%= f.submit 'Signup', class: 'w-50 btn btn-primary rounded-pill mb-3' %>
+        <%= link_to "Cancel", root_path, class: "w-50 btn btn-outline-secondary rounded-pill" %>
+      <% end %>
+    <% end %>
   </div>
 </div>

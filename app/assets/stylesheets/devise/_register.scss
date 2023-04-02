@@ -1,0 +1,27 @@
+.register-wrapper {
+  background: $white;
+  padding: 10px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  width: 75%;
+
+  .left-col {
+    @media (min-width: 992px) {
+      min-height: 500px;
+    }
+
+    @media (max-width: 992px) {
+      text-align: center !important;
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
+.register-action-box{
+  text-align: center;
+}
