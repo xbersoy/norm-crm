@@ -1,29 +1,32 @@
-<main class="form-signin w-100 m-auto">
-  <%= simple_form_for(resource, url: session_path(resource_name),
-                      wrapper: :floating_labels_form,
-                      wrapper_mappings: {
-                        select:        :floating_labels_select
-                      }) do |f| %>
+<main class="form-signin m-auto">
+  <div class="signin-wrapper my-3">
+    <%= simple_form_for(resource, url: session_path(resource_name),
+                        wrapper: :floating_labels_form,
+                        wrapper_mappings: {
+                          select: :floating_labels_select
+                        },
+                        :html=> { class: "login-form" } ) do |f| %>
 
-    <%= image_tag("logo.png", class:"mb-4", :alt => "", size:'100') %>
-    <%= content_tag(:h1, "Please sign in", class:'h3 mb-3 fw-normal') %>
+      <%= image_tag("sample-logo.png", class: "my-4", :alt => "", size: '65') %>
+      <%= content_tag(:h1, "Please sign in", class: 'h3 mb-3 fw-normal') %>
 
-    <div class="form-floating">
-      <%= f.input :email, autocomplete: 'current-password', class: 'form-control', id: 'email', hint: false %>
-    </div>
-    <div class="form-floating">
-      <%= f.input :password, autocomplete: 'current-password', class: 'form-control', id: 'pass', hint: false %>
-    </div>
+      <div class="form-floating">
+        <%= f.input :email, autocomplete: 'current-password', class: 'form-control', id: 'email', hint: false %>
+      </div>
+      <div class="form-floating">
+        <%= f.input :password, autocomplete: 'current-password', class: 'form-control', id: 'pass', hint: false %>
+      </div>
 
-    <% if devise_mapping.rememberable? %>
-      <%= f.input :remember_me, as: :boolean %>
+      <% if devise_mapping.rememberable? %>
+        <%= f.input :remember_me, as: :boolean %>
+      <% end %>
+
+      <%= f.button :submit, "Sign In", class: "w-100 btn btn-primary rounded-pill mb-3" %>
+      <%= link_to "Cancel", root_path, class: "w-100 btn btn-outline-secondary rounded-pill" %>
+      <p class="mb-0 mt-3">
+        <%= render "devise/shared/links" %>
+      </p>
+      <%= content_tag(:p, "© 2017–2022", class: 'mt-4 mb-3 text-muted') %>
     <% end %>
-
-    <%= f.button :submit, "Sign In", class: "w-100 btn btn-lg btn-primary rounded-pill mb-3" %>
-    <%= link_to "Cancel", root_path, class: "w-100 btn btn-lg btn-outline-secondary rounded-pill" %>
-    <p class="mb-0 mt-3">
-      <%= render "devise/shared/links" %>
-    </p>
-    <%= content_tag(:p, "© 2017–2022", class:'mt-5 mb-3 text-muted') %>
-  <% end %>
+  </div>
 </main>
