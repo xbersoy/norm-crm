@@ -1,9 +1,9 @@
 <main class="form-reset m-auto">
-  <div class="reset-wrapper my-3">
+  <div class="reset-wrapper my-3 devise-card">
     <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), wrapper: :floating_labels_form, html: { method: :post, class: "reset-form" }) do |f| %>
       <%= f.error_notification %>
 
-      <%= image_tag("sample-logo.png", class: "my-4", :alt => "", size: '65') %>
+      <%= image_tag("logo.png", class: "my-4", :alt => "", size: '65') %>
       <%= content_tag(:h1, "Reset your password", class: 'h3 mb-3 fw-normal') %>
 
       <div class="form-inputs my-4">

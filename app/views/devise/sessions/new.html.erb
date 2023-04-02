@@ -1,5 +1,5 @@
 <main class="form-signin m-auto">
-  <div class="signin-wrapper my-3">
+  <div class="signin-wrapper my-3 devise-card">
     <%= simple_form_for(resource, url: session_path(resource_name),
                         wrapper: :floating_labels_form,
                         wrapper_mappings: {
@@ -7,7 +7,7 @@
                         },
                         :html=> { class: "login-form" } ) do |f| %>
 
-      <%= image_tag("sample-logo.png", class: "my-4", :alt => "", size: '65') %>
+      <%= image_tag("logo.png", class: "my-4", :alt => "", size: '65') %>
       <%= content_tag(:h1, "Please sign in", class: 'h3 mb-3 fw-normal') %>
 
       <div class="form-floating">
