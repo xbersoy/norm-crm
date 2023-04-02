@@ -3,8 +3,8 @@
     <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), wrapper: :floating_labels_form, html: { method: :post, class: "reset-form" }) do |f| %>
       <%= f.error_notification %>
 
-      <%= image_tag("logo.png", class: "my-4", :alt => "", size: '65') %>
-      <%= content_tag(:h1, "Reset your password", class: 'h3 mb-3 fw-normal') %>
+      <%= image_tag("logo.png", class: "my-5", :alt => "", size: '75') %>
+      <%= content_tag(:h1, "Reset your password", class: 'h3 mt-1 mb-3 fw-normal') %>
 
       <div class="form-inputs my-4">
         <%= f.input :email,
@@ -14,11 +14,11 @@
                     html: { class: "form-control" }%>
       </div>
 
-      <div class="form-actions mb-5">
+      <div class="form-actions mb-5 mt-5">
         <%= f.button :submit, "Reset Password", class: "w-100 btn btn-primary rounded-pill mb-3" %>
         <%= link_to "Cancel", new_user_session_path, class: "w-100 btn btn-outline-secondary rounded-pill" %>
       </div>
-      <%= content_tag(:p, "© 2017–2022", class: 'my-4 text-muted') %>
+      <%= content_tag(:p, "© 2022 - Norm Teknoloji", class: 'my-4 text-muted') %>
     <% end %>
   </div>
 </main>
