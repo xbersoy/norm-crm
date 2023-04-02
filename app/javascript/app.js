@@ -1,23 +1,10 @@
 import "controllers";
 import "@hotwired/turbo-rails";
 
-import * as bootstrap from "bootstrap"
+import * as bootstrap from 'bootstrap';
 
 (function () {
   "use strict";
-  // var topNav = document.getElementById("topNav");
-  // console.log(topNav.classList);
-  // window.onscroll = function () {
-  //   if (document.body.scrollTop >= 200) {
-  //     topNav.classList.add("nav-colored");
-  //     topNav.classList.remove("nav-transparent");
-  //     console.log(topNav.classList);
-  //   } else {
-  //     topNav.classList.add("nav-transparent");
-  //     topNav.classList.remove("nav-colored");
-  //     console.log(topNav.classList);
-  //   }
-  // };
 
   window.addEventListener('DOMContentLoaded', event => {
 
