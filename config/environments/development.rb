@@ -71,7 +71,7 @@ Rails.application.configure do
   config.assets.quiet = true
 
   # FIX: not sure with this line
-  config.assets.debug = false
+  # config.assets.debug = false
 
   # added this line for reloading assets on navigation
   # before adding the line below when you press back button from signin page app doesnt navigate back
