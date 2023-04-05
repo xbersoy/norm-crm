@@ -6,6 +6,6 @@ import * as bootstrap from "bootstrap"
   // setInterval(myTimer, 1000);
   // debugger;
   function myTimer() {
-    console.log(document.getElementById("user_email"));
+    // console.log(document.getElementById("user_email"));
   }
 })();
