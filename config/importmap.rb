@@ -9,8 +9,8 @@ pin 'app'
 pin 'devise'
 pin 'dashboard'
 pin '@hotwired/stimulus', to: 'stimulus.js'
-pin '@hotwired/stimulus-loading', to: '/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js' # temp solution
-pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
+pin '@hotwired/stimulus-loading', to: 'stimulus-loading.js'
+pin '@hotwired/turbo-rails', to: 'turbo.min.js', preload: true
 pin_all_from 'app/javascript/controllers', under: 'controllers'
 pin 'bootstrap', to: 'https://ga.jspm.io/npm:bootstrap@5.2.3/dist/js/bootstrap.esm.js'
 pin 'bootstrap/icons', to: 'https://ga.jspm.io/npm:bootstrap-icons@1.9.1/font/bootstrap-icons.css'
