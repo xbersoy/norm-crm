@@ -1,0 +1,83 @@
+// Components
+@import "alert";
+
+html {
+  height: 100%;
+  scroll-padding-top: calc(4.5rem - 1px);
+}
+
+body {
+  background-color: var(--bs-gray-100);
+}
+
+#mainNav {
+  // font-weight: 400;
+
+  .navbar-toggler {
+    font-size: 70%;
+    padding: 0.8rem;
+  }
+
+  .navbar-brand {
+    color: #fff;
+  }
+
+  .navbar-nav {
+    margin-top: 1rem;
+
+    li.nav-item a.nav-link {
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &:active, &:focus {
+        color: #fff;
+        border-style: solid;
+        border-color: #fff;
+        border-radius: 10rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+
+    .navbar-brand {
+      font-size: 1.75em;
+      transition: font-size 0.3s;
+    }
+
+    .navbar-shrink {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+
+      .navbar-brand {
+        font-size: 1.5em;
+      }
+    }
+
+    .navbar-nav {
+      margin-top: 0;
+    }
+
+    .navbar-nav > li.nav-item > a.nav-link.active {
+      color: #fff;
+      border-style: solid;
+      border-color: #fff;
+      border-radius: 10rem;
+
+      &:active, &:focus, &:hover {
+        color: #fff;
+        border-style: solid;
+        border-color: #fff;
+        border-radius: 10rem;
+      }
+    }
+  }
+}
