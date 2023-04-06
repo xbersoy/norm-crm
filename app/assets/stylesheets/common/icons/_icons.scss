@@ -1,8 +1,16 @@
+$bootstrap-icons-font: "bootstrap-icons" !default;
+$bootstrap-icons-font-dir: "./fonts" !default;
+$bootstrap-icons-font-file: "#{$bootstrap-icons-font-dir}/#{$bootstrap-icons-font}" !default;
+$bootstrap-icons-font-hash: "24e3eb84d0bcaf83d77f904c78ac1f47" !default;
+$bootstrap-icons-font-src: url("#{$bootstrap-icons-font-file}.woff2?#{$bootstrap-icons-font-hash}") format("woff2"),
+url("#{$bootstrap-icons-font-file}.woff?#{$bootstrap-icons-font-hash}") format("woff") !default;
+
 @font-face {
-    font-family: "bootstrap-icons";
-    src: url("./fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d") format("woff2"),
-    url("./fonts/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("woff");
-  }
+  font-display: block;
+  font-family: $bootstrap-icons-font;
+  src: $bootstrap-icons-font-src;
+}
+
 
   [class^="bi-"]::before,
   [class*=" bi-"]::before {

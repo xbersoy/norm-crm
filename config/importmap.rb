@@ -14,6 +14,5 @@ pin '@hotwired/turbo-rails', to: 'turbo.min.js', preload: true
 pin_all_from 'app/javascript/controllers', under: 'controllers'
 pin 'popper', to: 'popper.js', preload: true
 pin 'bootstrap', to: 'bootstrap.min.js', preload: true
-# pin 'bootstrap/icons', to: 'https://ga.jspm.io/npm:bootstrap-icons@1.9.1/font/bootstrap-icons.css'
 pin 'stimulus', to: 'stimulus.js', preload: false # proxy for @hotwired/stimulus
 pin 'stimulus-password-visibility', to: 'https://ga.jspm.io/npm:stimulus-password-visibility@1.1.1/dist/stimulus-password-visibility.es.js'
