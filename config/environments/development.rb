@@ -67,17 +67,25 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
+  # ASSET MNG START ===========
+
   # Suppress logger output for asset requests.
-  config.assets.quiet = true
+  # config.assets.quiet = true
 
   # FIX: not sure with this line
-  config.assets.debug = false
+  # config.assets.debug = true
+
+  # a comment by me
+  # config.sass.inline_source_maps = true
 
   # added this line for reloading assets on navigation
   # before adding the line below when you press back button from signin page app doesnt navigate back
   # or when you navigate to sign in page from sign in page css's not loading (only common css classes like .home, .root)
   # ie: login screen background color is different but it wasn't changing
   # config.assets.digest = false
+
+  # ASSET MNG END ===========
+
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
