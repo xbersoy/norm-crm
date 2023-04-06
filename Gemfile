@@ -22,7 +22,7 @@ gem 'redis', '~> 4.0'
 # gem "image_processing", "~> 1.2"
 
 # Custom
-gem 'bootstrap', '~> 5.1'
+gem 'bootstrap', '~> 5.2.3'
 gem 'inline_svg', '~> 1.7'
 gem 'kramdown', '~> 2.3'
 gem 'kramdown-parser-gfm', '~> 1.1'
