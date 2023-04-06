@@ -23,6 +23,7 @@ gem 'redis', '~> 4.0'
 
 # Custom
 gem 'bootstrap', '~> 5.2.3'
+gem "font-awesome-sass", "~> 6.4.0"
 gem 'inline_svg', '~> 1.7'
 gem 'kramdown', '~> 2.3'
 gem 'kramdown-parser-gfm', '~> 1.1'
