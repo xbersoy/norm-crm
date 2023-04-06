@@ -1,5 +1,6 @@
 import "controllers"
-import * as bootstrap from "bootstrap"
+import "popper"
+import "bootstrap"
 
 (function () {
   "use strict";

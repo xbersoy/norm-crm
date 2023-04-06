@@ -1,11 +1,7 @@
-// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import { dashboard } from "controllers/dashboard"
-import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
-import "controllers"
-import "@hotwired/turbo-rails"
-
-import * as bootstrap from "bootstrap";
-eagerLoadControllersFrom("dashboard", dashboard)
+import "controllers";
+import "@hotwired/turbo-rails";
+import "popper"
+import "bootstrap"
 
 const sidebarNavWrapper = document.querySelector(".sidebar-nav-wrapper");
 const mainWrapper = document.querySelector(".main-wrapper");
