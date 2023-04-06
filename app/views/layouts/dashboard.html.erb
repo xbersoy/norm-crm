@@ -21,7 +21,7 @@
 
       <section class="section">
         <div class="container-fluid">
-          <%= render(DashboardTitleSectionComponent.new('eCommerce Dashboard', nil)) %>
+          <%= render(DashboardTitleSectionComponent.new(controller_name.capitalize, nil)) %>
 
           <%= yield %>
         </div>

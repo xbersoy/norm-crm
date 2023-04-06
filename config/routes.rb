@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   get 'dashboard', to: 'dashboard#index'
-  get 'products', to: 'products#index'
+  # resource :products
+  get '/products', to: 'products#index'
 end
