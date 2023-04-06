@@ -14,8 +14,10 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w[
   devise.js
   devise.scss
-  app.js
+  application.js
   application.scss
   dashboard.scss
   dashboard.js
+  bootstrap.min.js
+  popper.js
 ]
